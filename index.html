@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html ng-app="multilang" ng-controller="Ctrl as ctrl">
+
+	<head>
+		<meta charset="UTF-8">
+		<title translate="multititle">Влад Кевляк - личная страница.</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Language" content="en, ru, pl">
+		<meta name="theme-color" content="#ff8080">
+		<meta name="msapplication-navbutton-color" content="#ff8080">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="keywords" lang="en" content="Vlad, Kevan, system, administrator, electronic, engineer, IT, network, servers">
+		<meta name="description" lang="en" content="Personal page Vlad Kevan. Experienced IT specialist. Resume. Contacts.">
+		<meta name="keywords" lang="ru" content="Влад, Кевляк, системный, администратор, инженер, электроник, ИТ, сети, сервера">
+		<meta name="description" lang="ru" content="Личная страница Влада Кевляка. Опытный IT специалист. Резюме. Контакты.">
+		<meta name="keywords" lang="pl" content="Władysław, Kiewlak, administrator, systemu, inżynier, elektronik, IT, sieci, serwera">
+		<meta name="description" lang="pl" content="Osobista strona Władysława Kiewlaka. Doświadczony specjalista IT. Streszczenie. Kontakty.">
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-translate.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only" translate="multinavbar">Переключение навигации</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-img pull-left" href="/"><img src="img/logo.png" alt="V-Systems"/></a>	
+				</div>
+				<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#" translate="mnavind">Главная</a></li>
+						<li><a href="#resume" translate="mnavrez">Резюме</a></li>
+						<li><a href="#contacts" translate="mnavcon">Контакты</a></li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<select ng-options="language | translate for language in ctrl.languages" ng-model="ctrl.language" ng-change="ctrl.updateLanguage()">
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div id="resume" class="mtr">
+			<div class="container">
+					<h1 translate="mresume">Резюме</h1>
+					<h2 translate="mact">Сфера деятельности</h2>
+					<p class="lead" translate="madmin">Сетевые технологии и системное администрирование.</p>
+				<hr>
+					<h2 translate="meduc">Образование</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<p class="lead" translate="mncoll">Гродненский государственный Политехнический колледж</p>
+						<p translate="macoll"><em>2007 - 2011</em><br>
+						Отделение: Автоматизации и информатизации<br>
+						Специальность: Вычислительные машины, системы и сети<br>
+						Специализация: Эксплуатация локальных компьютерных сетей<br>
+						Квалификация: техник
+						</p>
+					</div>
+					<div class="col-md-6">
+						<p class="lead" translate="mnuni">Белорусский государственный университет информатики и радиоэлектроники</p>
+						<p translate="mauni"><em>2011 - Настоящее время (6 курс)</em><br>
+						Факультет: Факультет заочного обучения<br>
+						Специальность: Электронные вычислительные средства<br>
+						Квалификация: Инженер-электроник
+						</p>
+					</div>
+				</div>
+				<hr>
+					<h2 translate="mexp">Опыт работы</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<p class="lead" translate="moptiman">Торговая сеть "Optima" (ООО "Промтраст энд Ко")</p>
+						<h4 translate="mingel">Системный администратор (Инженер-электроник)</h4>
+						<p><em translate="mowtime">Сентябрь 2013 - Настоящее время</em><br>
+						<ul>
+							<li translate="moptadm0">Администрирование серверов на ОС Windows Server, Linux</li>
+							<li translate="moptadm1">Подключение магазинов к корпоративной сети по технологии VPN</li>
+							<li translate="moptadm2">Администрирование баз данных (Progress, MySQL, MS SQL)</li>
+							<li translate="moptadm3">Техническая поддержка пользователей, в том числе удаленных</li>
+							<li translate="moptadm4">Обслуживание кассового оборудования и ПО</li>
+							<li translate="moptadm5">Прокладка, настройка, локальной вычислительной сети</li>
+							<li translate="moptadm6">Установка и настройка систем видеонаблюдения</li>
+						</ul>
+						</p>
+					</div>
+					<div class="col-md-6">
+						<p class="lead" translate="madmon">Администрация Октябрьского района г. Гродно Отдел образования, спорта и туризма</p>
+						<h4 translate="mingen">Инженер-электроник</h4>
+						<p><em translate="mawtime">2011-2013</em><br>
+						<ul>
+							<li translate="maoradm0">Ремонт персональных компьютеров, ноутбуков</li>
+							<li translate="maoradm1">Установка операционных систем и прикладного программного обеспечения</li>
+							<li translate="maoradm2">Обслуживание принтеров и копировальных устройств</li>
+							<li translate="maoradm3">Прокладка, настройка, локальной вычислительной сети</li>
+							<li translate="maoradm4">Работа с мультимедиа оборудованием</li>
+						</ul>
+						</p>
+					</div>
+				</div>
+				<hr>
+					<h2 translate="mdinf">Дополнительная информация</h2>
+				<div class="row">
+					<div class="col-md-4">
+						<p class="lead" translate="mskills">Навыки</p>
+						<p>
+						<ul>
+							<li translate="mskills0">Виртуализация серверов (Hyper-V, VMware ESX, Oracle VM VirtualBox)</li>
+							<li translate="mskills1">Настройка серверов (OpenVPN, Squid, Samba, Web (Apache+MySQL+PHP))</li>
+							<li translate="mskills2">Опыт в создании сайтов (HTML / HTML5, CSS / CSS3, JavaScript)</li>
+							<li translate="mskills3">Знание CMS (OpenCart, Joomla, WordPress)</li>
+							<li translate="mskills4">Небольшой опыт в программировании (C#, Assembler, JavaScript, Pascal)<br>
+							Начальные знания Microsoft .NET Core</li>
+						</ul>
+						</p>
+					</div>
+					<div class="col-md-4">
+						<p class="lead" translate="moth">Другое</p>
+						<p>
+						<ul>
+							<li translate="moth0">Наличие личного автомобиля и удостоверения на право управления транспортным средством категории В</li>
+							<li translate="moth1">Отсутствие вредных привычек</li>
+							<li translate="moth2">Возможность официального трудоустройства в Республике Польша</li>
+						</ul>
+						</p>
+					</div>
+					<div class="col-md-4">
+						<p class="lead" translate="mperq">Личные качества</p>
+						<p>
+						<ul>
+							<li translate="mperq0">Практичность</li>
+							<li translate="mperq1">Ответственность</li>
+							<li translate="mperq2">Дисциплинированность</li>
+							<li translate="mperq3">Обучаемость</li>
+						</ul>
+						</p>
+					</div>
+				</div>
+					<br><p class="text-center"><a class="btn btn-lg btn-primary btn-danger" href="docs/resume_admin_vlad_kevl.pdf" role="button" translate="mdowr">Скачать резюме</a></p>
+				<hr>
+			</div>
+		</div>
+
+		<div id="contacts" class="mt">
+			<div class="container">
+				<h1 translate="mcontact">Контакты</h1>
+					<dl class="contact dl-horizontal">
+						<blockquote>
+							<dt translate="mcont0">Имя:</dt>
+							<dd translate="mcont1">Влад Кевляк</dd>
+							<dt translate="mcont2">Адрес:</dt>
+							<dd translate="mcont3">230026, <abbr title="Республика Беларусь">РБ</abbr>, г. Гродно, пр-т Клецкова, 32</dd>
+							<dt translate="mcont4">Телефон:</dt>
+							<dd translate="mcont5"><abbr title="+37529">(029)</abbr> 282-3302</dd>
+							<dt translate="mcont6">Эл. почта:</dt>
+							<dd><a id="mymail" href="mailto:" onclick="myhref()" translate="mcont7">vlad&#64;kevl<b>.</b>by</a></dd>
+						</blockquote>
+					</dl>
+
+				<div class="map" style="height: 350px; width: 100%;" translate="mmap">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ILL-A-5HaPLqRXHT4XA9JQqgSQxfTEdt&amp;lang=ru_RU&amp;scroll=false"></script>
+				</div>
+
+				<div class="social">
+					<p class="text-center"><h1><small translate="mbutt">Кнопки для быстрой связи</small></h1><hr class="social-line"></p>
+					<a id="mymailb" onclick="myhref()" class="btn btn-mail btn-circle"><i class="fa fa-envelope fa-4x"></i></a>
+					<a id="myvk" onclick="myhref()" class="btn btn-vk btn-circle"><i class="fa fa-vk fa-4x"></i></a>
+					<a id="myfb" onclick="myhref()" class="btn btn-facebook btn-circle"><i class="fa fa-facebook-square fa-4x"></i></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="footer">
+				<p class="pull-right"><a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a></p>
+				<p class="text-muted"><a href="http://kevl.by" translate="mcorp">Влад Кевляк</a> &copy; 2016</p>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+		function myhref(){
+			mymail = ('mailto:' + 'vlad' + '@' + 'kevl.by')
+			myvk = ('http://vk.com/' + 'vkevl')
+			myfb = ('https://www.facebook.com/' + 'vkevl')
+			document.getElementById('mymail').href=mymail
+			document.getElementById('mymailb').href=mymail
+			document.getElementById('myvk').href=myvk
+			document.getElementById('myfb').href=myfb
+		}
+		</script>
+
+		<script type="text/javascript">
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter39729575 = new Ya.Metrika({
+						id:39729575,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true
+					});
+				} catch(e) { }
+			});
+
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/39729575" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+	</body>
+
+</html>

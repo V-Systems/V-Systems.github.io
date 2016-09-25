@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Host: www.kevl.by
+Sitemap: http://kevl.by/sitemap.xml
