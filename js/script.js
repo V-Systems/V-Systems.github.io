@@ -74,7 +74,7 @@ app.config(function($translateProvider) {
 		ru: 'Русский',
 		en: 'English',
 		pl: 'Polski',
-		multititle: 'Vlad Kievlak - personal page',
+		multititle: 'Vlad Kevlyak - personal page',
 		multinavbar: 'Toggle navigation',
 		mnavind: 'Home',
 		mnavrez: 'Resume',
@@ -125,7 +125,7 @@ app.config(function($translateProvider) {
 		mdowr:  '<a class="btn btn-lg btn-primary btn-danger" href="docs/resume_admin_vlad_kevl_en.pdf" role="button" translate="mdowr">Download resume</a>',
 		mcontact: 'Contacts',
 		mcont0: 'Name:',
-		mcont1: 'Vlad Kievlak',
+		mcont1: 'Vlad Kevlyak',
 		mcont2:'Address:',
 		mcont3:  '230026, <abbr title="Republic of Belarus">RB</abbr>, Grodno, ave Kletskova, 32',
 		mcont4:  'Phone:',
@@ -133,7 +133,7 @@ app.config(function($translateProvider) {
 		mcont6:  'E-mail:',
 		mcont7:  'vlad'+'@'+'kevl.by',
 		mbutt:  'Buttons for quick communications',
-		mcorp:  'Vlad Kievlak',
+		mcorp:  'Vlad Kevlyak',
 		mmap: '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ILL-A-5HaPLqRXHT4XA9JQqgSQxfTEdt&amp;lang=en_US&amp;scroll=false"></script>'
 	})
 	.translations('pl', {
